@@ -36,6 +36,31 @@
          #play-pause-btn.playing:hover {
             background-color: #990000;
          }
+
+         #volume-control {
+            margin-left: 10px;
+            width: 100px;
+         }
+
+         #volume-control::-webkit-slider-runnable-track {
+            background-color: #ddd;
+            height: 5px;
+            border-radius: 3px;
+         }
+
+         #volume-control::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            background-color: #0099cc;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            margin-top: -8px;
+         }
+
+         #volume-control:focus::-webkit-slider-thumb {
+            background-color: #0077b3;
+         }
       </style>
    </head>
    <body>
@@ -44,11 +69,13 @@
             <source src="river-sound.mp3" type="audio/mpeg">
          </audio>
          <button id="play-pause-btn" onclick="togglePlayPause()">Play Sound</button>
+         <input id="volume-control" type="range" min="0" max="1" step="0.1" value="1" onchange="changeVolume()">
       </div>
 
       <script>
          const riverSound = document.getElementById("river-sound");
          const playPauseBtn = document.getElementById("play-pause-btn");
+         const volumeControl = document.getElementById("volume-control");
 
          function togglePlayPause() {
             if (riverSound.paused) {
@@ -60,6 +87,10 @@
                playPauseBtn.innerText = "Play Sound";
                playPauseBtn.classList.remove("playing");
             }
+         }
+
+         function changeVolume() {
+            riverSound.volume = volumeControl.value;
          }
       </script>
    </body>
