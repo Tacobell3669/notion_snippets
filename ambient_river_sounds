@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>River Sound Widget</title>
+      <style>
+         .widget-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+         }
+
+         #play-pause-btn {
+            background-color: #0099cc;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0 10px;
+         }
+
+         #play-pause-btn:hover {
+            background-color: #0077b3;
+         }
+
+         #play-pause-btn.playing {
+            background-color: #cc0000;
+         }
+
+         #play-pause-btn.playing:hover {
+            background-color: #990000;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="widget-container">
+         <audio id="river-sound" loop>
+            <source src="river-sound.mp3" type="audio/mpeg">
+         </audio>
+         <button id="play-pause-btn" onclick="togglePlayPause()">Play Sound</button>
+      </div>
+
+      <script>
+         const riverSound = document.getElementById("river-sound");
+         const playPauseBtn = document.getElementById("play-pause-btn");
+
+         function togglePlayPause() {
+            if (riverSound.paused) {
+               riverSound.play();
+               playPauseBtn.innerText = "Pause Sound";
+               playPauseBtn.classList.add("playing");
+            } else {
+               riverSound.pause();
+               playPauseBtn.innerText = "Play Sound";
+               playPauseBtn.classList.remove("playing");
+            }
+         }
+      </script>
+   </body>
+</html>
