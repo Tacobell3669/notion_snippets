@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Water Bottle Tracker</title>
+    <style>
+      section {
+        border: 2px solid black;
+        padding: 10px;
+        display: inline-block;
+        /* other styles */
+        /* white-space: nowrap; */
+      }
+
+      #count, #detail {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      button {
+        background-color: #8ad18d;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5cd060;
+    }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Today you drank...</h2>
+      <p>
+        <p id="count">0</p>
+        <p id="detail">bottles of water</p>
+      </p>
+      <button id="minus-button">-</button>
+      <button id="reset-button">Reset Count</button>
+      <button id="plus-button">+</button>
+    </section>
+    <script>
+      let count = 0;
+
+      function incrementCount() {
+        count += 1;
+        document.getElementById("count").innerHTML = count;
+      }
+
+      function decrementCount() {
+        count -= 1;
+        if (count < 0) {
+          count = 0;
+        }
+        document.getElementById("count").innerHTML = count;
+      }
+
+      function resetCount() {
+        count = 0;
+        document.getElementById("count").innerHTML = count;
+      }
+
+      document.getElementById("plus-button").addEventListener("click", incrementCount);
+
+      document.getElementById("minus-button").addEventListener("click", decrementCount);
+
+      document.getElementById("reset-button").addEventListener("click", resetCount);
+    </script>
+  </body>
+</html>
