@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimalist Pomodoro Timer</title>
+	<style>
+		body {
+			background-color: #9aa895;
+		}
+
+		.timer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		h1 {
+			font-size: 10rem;
+			font-weight: bold;
+			color: white;
+			margin-bottom: 2rem;
+		}
+
+		button {
+			font-size: 2rem;
+			color: white;
+			background-color: #4CAF50;
+			padding: 1rem 2rem;
+			border: none;
+			border-radius: 0.5rem;
+			margin: 1rem;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="timer">
+		<h1>25:00</h1>
+		<button id="start">Start</button>
+		<button id="reset">Reset</button>
+	</div>
+
+	<script>
+		const timer = document.querySelector('h1');
+		const startButton = document.querySelector('#start');
+		const resetButton = document.querySelector('#reset');
+
+		let time = 1500;
+		let countdown;
+
+		function updateTimer() {
+			const minutes = Math.floor(time / 60);
+			const seconds = time % 60;
+			timer.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+		}
+
+		function startTimer() {
+			countdown = setInterval(() => {
+				time--;
+				if (time < 0) {
+					clearInterval(countdown);
+					timer.textContent = '25:00';
+				} else {
+					updateTimer();
+				}
+			}, 1000);
+		}
+
+		function resetTimer() {
+			clearInterval(countdown);
+			time = 1500;
+			updateTimer();
+		}
+
+		startButton.addEventListener('click', startTimer);
+		resetButton.addEventListener('click', resetTimer);
+	</script>
+</body>
+</html>
