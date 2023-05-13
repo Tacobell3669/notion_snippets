@@ -28,9 +28,9 @@
 
     .icon {
       /* Change the icon size here */
-      font-size: 2em;
+      font-size: 3em;
       /* Change the icons colours here*/
-      color: #7a7a7a
+      color: #0b0b0b
     }
 
 
@@ -58,24 +58,99 @@
       color: #26a7de;
     }
 
-    .reddit:hover {
-      color: #ff4500;
+    #canva {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
     }
 
-    .tiktok:hover {
-      color: #ff0050;
+    #canva img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
     }
 
-    .youtube:hover {
-      color: #FF0000;
+    #canva img.top:hover {
+      opacity:0;
     }
 
-    .pinterest:hover {
-      color: #c8232c;
+    #bitly {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
 
-    .telegram:hover {
-      color: #2AABEE;
+    #bitly img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #bitly img.top:hover {
+      opacity:0;
+    }
+
+    #mlspin {
+      font-size: 0.95em;
+    }
+
+    .mlspin:hover {
+      color: #51a7cc;
+    }
+
+    #hootsuite {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    #hootsuite img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #hootsuite img.top:hover {
+      opacity:0;
+    }
+
+    #farrelly {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+    }
+
+    #farrelly img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #farrelly img.top:hover {
+      opacity:0;
     }
 
     .social {
@@ -125,13 +200,15 @@
       
       <!-- Start canva Icon -->
       <div id="canva" onclick="navigate(this.id)" class="social">
-        <img src="images/canva_icon.png">
+        <img class="bottom" src="images/canva_icon_hover.png" />
+        <img class="top" src="images/canva_icon.png" />
       </div>
       <!-- End canva Icon -->
       
       <!-- Start bitly Icon -->
       <div id="bitly" onclick="navigate(this.id)" class="social">
-        <img src="images/bitly_icon.png">
+        <img class="bottom" src="images/bitly_icon_hover.png" />
+        <img class="top" src="images/bitly_icon.png" />
       </div>
       <!-- End bitly Icon -->
       
@@ -140,6 +217,20 @@
         <span class="icon mlspin"><i class="fas fa-house-user"></i></span>
       </div>
       <!-- End mlspin Icon -->
+
+      <!-- Start hootsuite Icon -->
+      <div id="hootsuite" onclick="navigate(this.id)" class="social">
+        <img class="bottom" src="images/hootsuite_icon_hover.png" />
+        <img class="top" src="images/hootsuite_icon.png" />
+      </div>
+      <!-- End hootsuite Icon -->
+
+      <!-- Start farrelly Icon -->
+      <div id="farrelly" onclick="navigate(this.id)" class="social">
+        <img class="bottom" src="images/farrelly_icon_hover.png" />
+        <img class="top" src="images/farrelly_icon.png" />
+      </div>
+      <!-- End farrelly Icon -->
 
     </div>
 
@@ -152,28 +243,34 @@
         //if you want the URL to open in the same window use '_parent'  instead of '_blank'
 
         if (id === "email") {
-          window.open("gmail.com", '_blank').focus();
+          window.open("https://www.gmail.com", '_blank').focus();
         }
         else if (id === "facebook") {
-          window.open("https://facebook.com/", '_blank').focus();
+          window.open("https://www.facebook.com/", '_blank').focus();
         }
         else if (id === "instagram") {
-          window.open("instagram.com", '_blank').focus();
+          window.open("https://www.instagram.com", '_blank').focus();
         }
         else if (id === "linkedin") {
           window.open("https://www.linkedin.com/", '_blank').focus();
         }
         else if (id === "twitter") {
-          window.open("https://twitter.com/", '_blank').focus();
+          window.open("https://www.twitter.com/", '_blank').focus();
         }
         else if (id === "canva") {
-          window.open("https://canva.com/", '_blank').focus();
+          window.open("https://www.canva.com/", '_blank').focus();
         }
         else if (id === "bitly") {
-          window.open("https://bitly.com/", '_blank').focus();
+          window.open("https://www.bitly.com/", '_blank').focus();
         }
         else if (id === "mlspin") {
-          window.open("https://mlspin.com/", '_blank').focus();
+          window.open("https://www.mlspin.com/", '_blank').focus();
+        }
+        else if (id === "hootsuite") {
+          window.open("https://www.hootsuite.com/", '_blank').focus();
+        }
+        else if (id === "farrelly") {
+          window.open("https://www.farrellyrealtygroup.com/", '_blank').focus();
         }
       }
     </script>
