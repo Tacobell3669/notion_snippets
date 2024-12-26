@@ -46,16 +46,12 @@
       color: #7289da;
     }
 
-    .instagram:hover {
-      color: rgb(241, 102, 217);
-    }
-
     .linkedin:hover {
       color: #0e76a8;
     }
 
-    .twitter:hover {
-      color: #26a7de;
+    .zoom:hover {
+      color: #0B5CFF;
     }
 
     #canva {
@@ -187,6 +183,12 @@
       </div>
       <!-- End discord Icon -->
 
+      <!-- Start zoom Icon -->
+      <div id="zoom" onclick="navigate(this.id)" class="social">
+        <span class="icon zoom"><i class="fa-solid fa-video"></i></span>
+      </div>
+      <!-- End discord Icon -->
+
     </div>
 
 
@@ -205,6 +207,9 @@
         }
         else if (id === "canva") {
           window.open("https://www.canva.com/", '_blank').focus();
+        }
+        else if (id === "zoom") {
+          window.open("https://www.zoom.us/", '_blank').focus();
         }
       }
     </script>
