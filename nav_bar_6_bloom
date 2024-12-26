@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
+    .icon {
+      /* Change the icon size here */
+      font-size: 3em;
+      /* Change the icons colours here*/
+      color: #0b0b0b
+    }
+
+
+    .blog:hover {
+      color: #ffbd2f;
+    }
+
+    .email:hover {
+      color: #23c8c8;
+    }
+
+    .facebook:hover {
+      color: #4267B2;
+    }
+
+    .instagram:hover {
+      color: rgb(241, 102, 217);
+    }
+
+    .linkedin:hover {
+      color: #0e76a8;
+    }
+
+    .twitter:hover {
+      color: #26a7de;
+    }
+
+    #canva {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+    }
+
+    #canva img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #canva img.top:hover {
+      opacity:0;
+    }
+
+    #bitly {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    #bitly img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #bitly img.top:hover {
+      opacity:0;
+    }
+
+    #mlspin {
+      font-size: 0.95em;
+    }
+
+    .mlspin:hover {
+      color: #51a7cc;
+    }
+
+    #hootsuite {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    #hootsuite img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #hootsuite img.top:hover {
+      opacity:0;
+    }
+
+    #farrelly {
+      position:relative;
+      height:281px;
+      width:50px;
+      margin:0 auto;
+      margin-top: 10px;
+    }
+
+    #farrelly img {
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 0s ease-in-out;
+      -moz-transition: opacity 0s ease-in-out;
+      -o-transition: opacity 0s ease-in-out;
+      transition: opacity 0s ease-in-out;
+    }
+
+    #farrelly img.top:hover {
+      opacity:0;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+
+    <div class="wrapper">
+
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="social">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+      
+      <!-- Start canva Icon -->
+      <div id="canva" onclick="navigate(this.id)" class="social">
+        <img class="bottom" src="images/canva_icon_hover.png" />
+        <img class="top" src="images/canva_icon.png" />
+      </div>
+      <!-- End canva Icon -->
+
+    </div>
+
+
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "email") {
+          window.open("https://www.gmail.com", '_blank').focus();
+        }
+        else if (id === "discord") {
+          window.open("https://discord.com/", '_blank').focus();
+        }
+        else if (id === "canva") {
+          window.open("https://www.canva.com/", '_blank').focus();
+        }
+      }
+    </script>
+  </body>
+</html>
