@@ -50,6 +50,10 @@
       color: #0B5CFF;
     }
 
+    .1pass:hover {
+      color: #ff0000;
+    }
+
     #canva {
       position: relative;
       height: 3em;
@@ -111,6 +115,12 @@
       </div>
       <!-- End zoom Icon -->
 
+      <!-- Start 1pass Icon -->
+      <div id="1pass" onclick="navigate(this.id)" class="social">
+        <span class="icon lock"><i class="fa-solid fa-unlock-keyhole"></i></span>
+      </div>
+    <!-- End 1pass Icon -->
+
     </div>
 
 
@@ -133,6 +143,9 @@
         else if (id === "zoom") {
           window.open("https://www.zoom.us/", '_blank').focus();
         }
+        else if (id === "1pass") {
+        window.open("https://1password.com/", '_blank').focus();
+      }
       }
     </script>
   </body>
