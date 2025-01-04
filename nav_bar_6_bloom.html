@@ -50,11 +50,11 @@
       color: #0B5CFF;
     }
 
-    .icon.1pass {
+    .icon.pass {
       color: #0b0b0b;
     }
 
-    .icon.1pass:hover {
+    .icon.pass:hover {
       color: #ff0000;
     }
 
@@ -81,7 +81,7 @@
 
     .social {
       position: relative;
-      margin: 30px;
+      margin: 60px;
       cursor: pointer;
     }
   </style>
@@ -120,8 +120,8 @@
       <!-- End zoom Icon -->
 
       <!-- Start 1pass Icon -->
-      <div id="1pass" onclick="navigate(this.id)" class="social">
-        <span class="icon 1pass"><i class="fa-solid fa-unlock-keyhole"></i></span>
+      <div id="pass" onclick="navigate(this.id)" class="social">
+        <span class="icon pass"><i class="fa-solid fa-unlock-keyhole"></i></span>
       </div>
     <!-- End 1pass Icon -->
 
@@ -147,7 +147,7 @@
         else if (id === "zoom") {
           window.open("https://www.zoom.us/", '_blank').focus();
         }
-        else if (id === "1pass") {
+        else if (id === "pass") {
         window.open("https://1password.com/", '_blank').focus();
       }
       }
